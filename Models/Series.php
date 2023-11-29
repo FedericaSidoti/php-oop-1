@@ -18,4 +18,8 @@ class Serie extends Production {
     public function getSeasons(){
         return $this->seasons;
     }
+    //methods 
+    public function getInfo(){
+        echo "La serie è arrivata alla stagione $this->seasons.";
+    }
 }

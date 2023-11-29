@@ -23,7 +23,7 @@ class Production {
     }
 
     public function description() {
-        echo "$this->title : si tratta di un film con lingua originale $this->language. Votazione utenti: $this->rating. ";
+        echo "$this->title : si tratta di una produzione con lingua originale $this->language. Votazione utenti: $this->rating. ";
     }
     
 };

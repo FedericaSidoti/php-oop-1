@@ -26,6 +26,10 @@ class Movie extends Production {
     public function getDuration(){
         return $this->duration; 
     }
+    //methods 
+    public function getInfo() {
+        echo "I profitti sono stati di $this->profit euro e la durata del film è di $this->duration minuti. ";
+    }
 }
 
 // var_dump( new Movie('Pippo', 'aramaico','3','10', '6'))
