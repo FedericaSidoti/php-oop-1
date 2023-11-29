@@ -2,12 +2,18 @@
 
 require_once __DIR__ . '/Models/Production.php';
 require_once __DIR__ . '/Models/Movie.php';
+require_once __DIR__ . "/Models/Series.php";
 
 $movie_TPB = new Movie("La Storia Fantastica - The Princess Bride", "Inglese", "8", "10000", "97" );
 $movie_Sdust = new Movie("Stardust", "Inglese", "7", "20000", "120");
 $movie_MR = new Movie("Moulin Rouge!", "Americano", "9", "18000", "110" ); 
 $movie_J = new Movie("Jumanji", "Inglese", "9", "190000", "100");
 $movie_C = new Movie("Casper", "Inglese", "7", "200000", "80");
+$serie_ST = new Serie("Stranger Things", "Inglese", "10", "4");
+$serie_GOT = new Serie("Game of Thrones", "inglese", "9", "8");
+$serie_HD = new Serie("House of Dragons", "inglese", "9", "1");
+$serie_GO = new Serie("Good Omens", "Inglese", "8", "2");
+$serie_L = new Serie("Lucifer", "Inglese", "7", "6" );
 
 
 
@@ -20,6 +26,11 @@ $productions = [
     $movie_MR,
     $movie_J,
     $movie_C,
+    $serie_ST,
+    $serie_GOT,
+    $serie_HD,
+    $serie_GO,
+    $serie_L
 ];
 // var_dump($movies)
 ?>
@@ -54,7 +65,11 @@ $productions = [
                 <td><?= $production->language ?></td>
                 <td><?= $production->getRating() ?></td>
                 <td><?= $production->description() ?></td>
-                <td>info</td>
+                <?php if (isset($production-> seasons)){ ?>
+                    <td> Numero Stagioni :<?= $production -> seasons ?> </td> 
+                <?php } else {?> 
+                    <td> Durata : <?= $production -> getDuration() ?>, profitti: <?= $production -> getProfit()?> &euro; </td>
+                <?php  }  ?>
             </tr>
             <?php  }  ?>
         </tbody>
