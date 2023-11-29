@@ -1,13 +1,14 @@
 <?php
 
 require_once __DIR__ . '/Models/Production.php';
+require_once __DIR__ . '/Models/Movie.php';
 
-$movie_TPB = new Production("La Storia Fantastica - The Princess Bride", "Inglese", "8" );
+$movie_TPB = new Movie("La Storia Fantastica - The Princess Bride", "Inglese", "8", "10000", "97" );
 
-$movie_Sdust = new Production("Stardust", "Inglese", "7");
-$movie_MR = new Production("Moulin Rouge!", "Americano", "9" ); 
-$movie_J = new Production("Jumanji", "Inglese", "9");
-$movie_C = new Production("Casper", "Inglese", "7");
+$movie_Sdust = new Movie("Stardust", "Inglese", "7", "20000", "120");
+$movie_MR = new Movie("Moulin Rouge!", "Americano", "9", "18000", "110" ); 
+$movie_J = new Movie("Jumanji", "Inglese", "9", "190000", "100");
+$movie_C = new Movie("Casper", "Inglese", "7", "200000", "80");
 
 
 
@@ -40,10 +41,11 @@ $movies = [
         <table class="table table-primary">
         <thead>
             <tr>
-                <th class= "col-4" scope="col">Titolo</th>
-                <th class= "col-2" scope="col">Lingua</th>
+                <th class= "col-3" scope="col">Titolo</th>
+                <th class= "col-1" scope="col">Lingua</th>
                 <th class= "col-1" scope="col">Voto</th>
-                <th class= "col-5" scope="col">Descrizione</th>
+                <th class= "col-3" scope="col">Descrizione</th>
+                <th class= "col-4" scope="col">Informazioni</th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +55,7 @@ $movies = [
                 <td><?= $movie->language ?></td>
                 <td><?= $movie->getRating() ?></td>
                 <td><?= $movie->description() ?></td>
+                <td>info</td>
             </tr>
             <?php  }  ?>
         </tbody>
