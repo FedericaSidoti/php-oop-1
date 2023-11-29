@@ -32,7 +32,7 @@ $productions = [
     $serie_GO,
     $serie_L
 ];
-// var_dump($movies)
+
 ?>
 
 
@@ -46,7 +46,7 @@ $productions = [
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="text-center">Lista dei miei film preferiti</h1>
+    <h1 class="text-center">Lista delle mie produzioni preferite</h1>
     <div class="container">
         <table class="table table-primary">
         <thead>
@@ -65,11 +65,7 @@ $productions = [
                 <td><?= $production->language ?></td>
                 <td><?= $production->getRating() ?></td>
                 <td><?= $production->description(), $production -> getInfo() ?></td>
-                <?php if (isset($production-> seasons)){ ?>
-                    <td> Numero Stagioni :<?= $production -> getSeasons()?> </td> 
-                <?php } else { ?> 
-                    <td> Durata : <?= $production -> getDuration() ?>, profitti: <?= $production -> getProfit()?> &euro; </td>
-                <?php  }  ?>
+                <td> <?php $production->getMoreInfo() ?> </td>
             </tr>
             <?php  }  ?>
         </tbody>
