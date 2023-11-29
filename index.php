@@ -66,8 +66,8 @@ $productions = [
                 <td><?= $production->getRating() ?></td>
                 <td><?= $production->description() ?></td>
                 <?php if (isset($production-> seasons)){ ?>
-                    <td> Numero Stagioni :<?= $production -> seasons ?> </td> 
-                <?php } else {?> 
+                    <td> Numero Stagioni :<?= $production -> getSeasons()?> </td> 
+                <?php } else { ?> 
                     <td> Durata : <?= $production -> getDuration() ?>, profitti: <?= $production -> getProfit()?> &euro; </td>
                 <?php  }  ?>
             </tr>
