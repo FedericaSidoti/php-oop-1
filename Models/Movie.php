@@ -27,10 +27,10 @@ class Movie extends Production {
         return $this->duration; 
     }
     //methods 
-    public function getInfo() {
+    public function Info() {
         echo "I profitti sono stati di $this->profit euro e la durata del film è di $this->duration minuti. ";
     }
-    public function getMoreInfo(){
+    public function MoreInfo(){
         if(isset($this-> duration)) {
             echo "Durata :" .''. $this -> getDuration() . ", profitti:" .''. $this -> getProfit() .''. " &euro; ";
         }

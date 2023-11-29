@@ -19,10 +19,10 @@ class Serie extends Production {
         return $this->seasons;
     }
     //methods 
-    public function getInfo(){
+    public function Info(){
         echo "La serie è arrivata alla stagione $this->seasons.";
     }
-    public function getMoreInfo(){
+    public function MoreInfo(){
         if(isset($this-> seasons)) {
             echo "Numero Stagioni :". '' . $this -> getSeasons();
         }

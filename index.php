@@ -64,8 +64,8 @@ $productions = [
                 <td><?= $production->title ?></td>
                 <td><?= $production->language ?></td>
                 <td><?= $production->getRating() ?></td>
-                <td><?= $production->description(), $production -> getInfo() ?></td>
-                <td> <?php $production->getMoreInfo() ?> </td>
+                <td><?= $production->description(), $production -> Info() ?></td>
+                <td> <?php $production->MoreInfo() ?> </td>
             </tr>
             <?php  }  ?>
         </tbody>
